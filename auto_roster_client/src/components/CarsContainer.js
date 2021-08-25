@@ -1,11 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import fetchCars from '../actions/carsActions';
+import CarsForm from './CarsForm';
 
 class CarsContainer extends Component {
+
+    componentDidMount() {
+        this.props.fetchCars()
+    }
+
     render() {
         return (
-            <div>Cars container</div>
+            <div>
+                Cars container
+                <CarsForm />
+            </div>
         )
     }
 }
 
-export default CarsContainer
+export default connect(null, { fetchCars })(CarsContainer)
