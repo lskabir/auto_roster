@@ -1,9 +1,10 @@
 import React from 'react'
+import CarsContainer from './CarsContainer';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      Hello World
+      <CarsContainer />
     </div>
   );
 }
