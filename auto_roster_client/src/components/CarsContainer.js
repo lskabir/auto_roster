@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetchCars from '../actions/carsActions';
+import CarsComponent from './CarsComponent';
+import { fetchCars } from '../actions/carsActions';
 import CarsForm from './CarsForm';
 
 class CarsContainer extends Component {
@@ -12,7 +13,8 @@ class CarsContainer extends Component {
     render() {
         return (
             <div>
-                Cars container
+                <CarsComponent />
+                <h2>Add new car to the inventory:</h2>
                 <CarsForm />
             </div>
         )

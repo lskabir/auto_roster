@@ -1,5 +1,5 @@
 
-const fetchCars = () => {
+export const fetchCars = () => {
     return (dispatch) => {
         fetch('http://localhost:3000/cars')
         .then(resp => resp.json())
@@ -7,4 +7,16 @@ const fetchCars = () => {
     }
 }
 
-export default fetchCars
+export const addCar = (car) => {
+    return (dispatch) => {
+        fetch('http://localhost:3000/cars', {
+            method: 'POST',
+            body: JSON.stringify(car),
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        .then(resp => resp.json())
+        .then(car => dispatch({type: 'ADD_CAR', payload: car}))
+    }
+}
