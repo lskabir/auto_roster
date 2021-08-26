@@ -17,14 +17,14 @@ class CarsForm extends Component {
 
         this.setState({
             [name]: value
-        })
+        }, () => console.log(this.state))
     }
 
     handleSubmit = event => {
         event.preventDefault()
 
         this.props.addCar(this.state)
-        
+
         const name = event.target
         this.setState({
             [name]: ''
@@ -39,10 +39,10 @@ class CarsForm extends Component {
                 <input type='text' value={this.state.color} onChange={this.handleChange} name='color' placeholder='Color' /><br/>
                 <input type="number" value={this.state.year} onChange={this.handleChange} name='year' placeholder='Year' /><br/>
 
-                <select id='origins' name='origin_id'>
-                    <option>Choose a Origin:</option>
-                    <option value={this.state.origin_id}>Import</option>
-                    <option value={this.state.origin_id}>Export</option>
+                Choose a Origin:
+                <select onChange={this.handleChange} id='origins' name='origin_id'>
+                    <option>Import</option>
+                    <option>Export</option>
                 </select><br/><br/>
                 
                 <input type='submit' value='Add Car' />
