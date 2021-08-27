@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+    background-color: #FFE6E6;
+}
+
+.welcome {
+    margin-top: 200px;
+}
+
+#form {
+    margin: auto;
+    width: 50%;
+}
