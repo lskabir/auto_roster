@@ -20,3 +20,13 @@ export const addCar = (car) => {
         .then(car => dispatch({type: 'ADD_CAR', payload: car}))
     }
 }
+
+export const deleteCar = id => {
+    fetch(`http://localhost:3000/cars/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    .then(resp => console.log(resp))
+}

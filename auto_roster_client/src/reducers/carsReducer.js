@@ -3,7 +3,6 @@ const carsReducer = (state = [], action) => {
         case 'FETCH_CARS':
             return action.payload
         case 'ADD_CAR':
-            console.log(action.payload)
             return [...state, action.payload]
         default:
             return state

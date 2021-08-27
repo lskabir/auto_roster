@@ -1,10 +1,10 @@
 import React from 'react'
-import CarsContainer from './CarsContainer';
+import Router from '../components/Router';
 
 const App = () => {
   return (
     <div className="App">
-      <CarsContainer />
+      <Router />
     </div>
   );
 }

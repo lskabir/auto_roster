@@ -1,19 +1,17 @@
-import { connect } from 'react-redux';
+import React from 'react';
 
-const CarsComponent = props => {
-    return (props.cars.map(car => {
+const CarsComponent = ({cars, deleteCar}) => {
+    return (cars.map(car => {
         return (
             <div key={car.id}>
-                <h2>{car.make}</h2>
+                <h3>{car.make}</h3>
+                <p>Model: {car.model}</p>
+                <p>Color: {car.color}</p>
+                <p>Year: {car.year}</p>
+                <button onClick={() => deleteCar(car.id)}>Delete</button>
             </div>
         )
     }))
 }
 
-const mapStateToProps = state => {
-    return {
-        cars: state
-    }
-}
-
-export default connect(mapStateToProps)(CarsComponent)
+export default CarsComponent
