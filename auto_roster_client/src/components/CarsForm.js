@@ -22,8 +22,8 @@ class CarsForm extends Component {
     }
 
     handleSubmit = event => {
+        
         event.preventDefault()
-
         this.props.addCar(this.state)
         this.setState({make: '', model: '', color: '', year: ''})
     }

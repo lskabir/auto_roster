@@ -29,9 +29,9 @@ const mapDispatchToProps = dispatch => {
         fetchCars: () => {
             dispatch(fetchCars())
         },
-        // deleteCar: (id) => {
-        //     dispatch(deleteCar(id))
-        // }
+        deleteCar: (id) => {
+            dispatch(deleteCar(id))
+        }
     }
 }
 

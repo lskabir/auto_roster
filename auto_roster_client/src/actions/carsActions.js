@@ -22,11 +22,11 @@ export const addCar = (car) => {
 }
 
 export const deleteCar = id => {
+    return (dispatch) => {
     fetch(`http://localhost:3000/cars/${id}`, {
-        method: 'DELETE',
-        headers: {
-            'content-type': 'application/json'
-        }
+        method: 'DELETE'
     })
-    .then(resp => console.log(resp))
+    .then(resp => resp.json())
+    .then(car => dispatch({type: 'DELETE_CAR', payload: car.id}))
+    }
 }
