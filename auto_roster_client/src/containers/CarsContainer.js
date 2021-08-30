@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CarsComponent from '../components/CarsComponent';
-import { fetchCars, deleteCar } from '../actions/carsActions';
+import { fetchCars, editCar, deleteCar } from '../actions/carsActions';
 
 class CarsContainer extends Component {
-
     componentDidMount() {
         this.props.fetchCars()
     }
@@ -12,7 +11,7 @@ class CarsContainer extends Component {
     render() {
         return (
             <div>
-                <CarsComponent cars={this.props.cars} deleteCar={this.props.deleteCar} />
+                <CarsComponent cars={this.props.cars} editCar={this.props.editCar} deleteCar={this.props.deleteCar} />
             </div>
         )
     }
@@ -31,6 +30,9 @@ const mapDispatchToProps = dispatch => {
         },
         deleteCar: (id) => {
             dispatch(deleteCar(id))
+        },
+        editCar: (car) => {
+            dispatch(editCar(car))
         }
     }
 }

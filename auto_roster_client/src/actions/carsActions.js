@@ -21,6 +21,20 @@ export const addCar = (car) => {
     }
 }
 
+export const editCar = car => {
+    return (dispatch) => {
+        fetch(`http://localhost:3000/cars/${car.id}`, {
+            method: 'PATCH',
+            body: JSON.stringify(car),
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        .then(resp => resp.json())
+        .then(car => dispatch({type: 'EDIT_CAR', payload: car}))
+    }
+}
+
 export const deleteCar = id => {
     return (dispatch) => {
     fetch(`http://localhost:3000/cars/${id}`, {

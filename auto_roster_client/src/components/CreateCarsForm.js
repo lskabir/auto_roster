@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
 import { addCar } from '../actions/carsActions';
 import { connect } from 'react-redux';
 
-class CarsForm extends Component {
+class CreateCarsForm extends Component {
 
     state = {
         make: '',
@@ -38,17 +37,17 @@ class CarsForm extends Component {
                 <input className="form-control" type='text' value={this.state.color} onChange={this.handleChange} name='color' placeholder='Color' /><br/>
                 <input className="form-control" type="number" value={this.state.year} onChange={this.handleChange} name='year' placeholder='Year' /><br/>
 
-                <span><strong>Origin:</strong></span>
+                <span><strong>Choose A Origin:</strong></span>
                 <select onChange={this.handleChange} name='origin_id'>
                     <option>Import</option>
                     <option>Export</option>
                 </select><br/><br/>
                 
-                <Button type="submit" className="btn btn-light btn-outline-dark">Add Car</Button>
+                <button type="submit" className="btn btn-light btn-outline-dark">Add Car</button>
             </form>
             </div>
         )
     }
 }
 
-export default connect(null, { addCar })(CarsForm)
+export default connect(null, { addCar })(CreateCarsForm)
