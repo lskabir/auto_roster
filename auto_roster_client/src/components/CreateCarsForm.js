@@ -30,7 +30,7 @@ class CreateCarsForm extends Component {
     render() {
         return (
             <div className="form">
-            <h2>Add new car to the inventory:</h2>
+            <h2 className='text' style={{color:'#3DB2FF'}}><strong>Add new car to the inventory</strong></h2>
             <form onSubmit={this.handleSubmit}>
                 <input className="form-control"  type='text' value={this.state.make} onChange={this.handleChange} name='make' placeholder='Make' /><br/>
                 <input className="form-control" type='text' value={this.state.model} onChange={this.handleChange} name='model' placeholder='Model' /><br/>

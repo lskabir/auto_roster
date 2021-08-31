@@ -53,7 +53,7 @@ class EditCarsForm extends React.Component {
     render() {
         return (
             <div className="form">
-                <h2>Edit Car Info:</h2>
+                <h2 className='text'>Edit Car Info:</h2>
                 <form onSubmit={this.confirm}>
                     <input className="form-control" type='text' value={this.state.make} onChange={this.handleChange} name='make' /><br />
                     <input className="form-control" type='text' value={this.state.model} onChange={this.handleChange} name='model' /><br />
