@@ -60,7 +60,7 @@ class EditCarsForm extends React.Component {
                     <input className="form-control" type='text' value={this.state.color} onChange={this.handleChange} name='color' /><br />
                     <input className="form-control" type='number' value={this.state.year} onChange={this.handleChange} name='year' /><br />
 
-                    <span><strong>Choose A Origin:</strong></span>
+                    <span style={{margin:'10px'}}><strong>Choose A Origin:</strong></span>
                     <select onChange={this.handleChange} name='origin_id'>
                         <option>Import</option>
                         <option>Export</option>
