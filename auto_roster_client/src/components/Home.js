@@ -2,8 +2,9 @@ import React from 'react'
 
 const Home = () => {
     return (
-    <div className='welcome'>
-        <h1>Welcome to the Auto Roster</h1>
+    <div>
+        <h1 id='welcome-text'>Welcome to your Inventory</h1>
+        <h4><strong>Click 'Car List' to check available cars</strong></h4>
     </div>
     )
 }

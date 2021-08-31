@@ -1,13 +1,33 @@
 body {
+    color: white;
+    background-image: url('../images/car.jpeg');
+    opacity: 0.8;
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
-    background-color: #FFE6E6;
 }
 
-.welcome {
+#welcome-text {
+    font-family: verdana;
+    font-size: 400%;
+    color: whitesmoke;
     margin-top: 250px;
 }
 
-#form {
+.car-div {
+    background-color: #226597;
     margin: auto;
     width: 50%;
+    border: 2px solid;
+    padding: 10px;
+    box-shadow: 6px 4px 8px;
+}
+
+.form {
+    margin: auto;
+    width: 50%;
+}
+
+.button {
+    margin: 5px;
 }

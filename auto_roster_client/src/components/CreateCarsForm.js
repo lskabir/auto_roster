@@ -29,7 +29,7 @@ class CreateCarsForm extends Component {
 
     render() {
         return (
-            <div id="form">
+            <div className="form">
             <h2>Add new car to the inventory:</h2>
             <form onSubmit={this.handleSubmit}>
                 <input className="form-control"  type='text' value={this.state.make} onChange={this.handleChange} name='make' placeholder='Make' /><br/>
@@ -43,7 +43,7 @@ class CreateCarsForm extends Component {
                     <option>Export</option>
                 </select><br/><br/>
                 
-                <button type="submit" className="btn btn-light btn-outline-dark">Add Car</button>
+                <button type="submit" className="btn btn-light btn-outline-info">Add Car</button>
             </form>
             </div>
         )

@@ -52,21 +52,21 @@ class EditCarsForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="form">
                 <h2>Edit Car Info:</h2>
                 <form onSubmit={this.confirm}>
-                    <input type='text' value={this.state.make} onChange={this.handleChange} name='make' /><br />
-                    <input type='text' value={this.state.model} onChange={this.handleChange} name='model' /><br />
-                    <input type='text' value={this.state.color} onChange={this.handleChange} name='color' /><br />
-                    <input type='number' value={this.state.year} onChange={this.handleChange} name='year' /><br />
+                    <input className="form-control" type='text' value={this.state.make} onChange={this.handleChange} name='make' /><br />
+                    <input className="form-control" type='text' value={this.state.model} onChange={this.handleChange} name='model' /><br />
+                    <input className="form-control" type='text' value={this.state.color} onChange={this.handleChange} name='color' /><br />
+                    <input className="form-control" type='number' value={this.state.year} onChange={this.handleChange} name='year' /><br />
 
                     <span><strong>Choose A Origin:</strong></span>
                     <select onChange={this.handleChange} name='origin_id'>
                         <option>Import</option>
                         <option>Export</option>
                     </select><br /><br />
-                    <button onClick={this.cancel}>Cancel</button>
-                    <button>Submit</button>
+                    <button className="button btn btn-secondary" onClick={this.cancel}>Cancel</button>
+                    <button className="button btn btn-info">Submit</button>
                 </form>
             </div>
         )
