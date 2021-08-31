@@ -37,13 +37,13 @@ class CreateCarsForm extends Component {
                 <input className="form-control" type='text' value={this.state.color} onChange={this.handleChange} name='color' placeholder='Color' /><br/>
                 <input className="form-control" type="number" value={this.state.year} onChange={this.handleChange} name='year' placeholder='Year' /><br/>
 
-                <span><strong>Choose A Origin:</strong></span>
+                <span><strong style={{margin:'10px'}}>Choose A Origin:</strong></span>
                 <select onChange={this.handleChange} name='origin_id'>
                     <option>Import</option>
                     <option>Export</option>
                 </select><br/><br/>
                 
-                <button type="submit" className="btn btn-light btn-outline-info">Add Car</button>
+                <button type="submit" className="btn btn-info">Add Car</button>
             </form>
             </div>
         )
