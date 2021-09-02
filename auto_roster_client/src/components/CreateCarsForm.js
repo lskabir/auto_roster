@@ -9,7 +9,7 @@ class CreateCarsForm extends Component {
         model: '',
         color: '',
         year: '',
-        origin_id: ''
+        origin_id: 'Import'
     }
 
     handleChange = event => {

@@ -5,7 +5,7 @@ class CarsController < ApplicationController
   def index
     @cars = Car.all
 
-    render json: @cars
+    render json: @cars, include: :origin
   end
 
   # GET /cars/1
@@ -16,9 +16,8 @@ class CarsController < ApplicationController
   # POST /cars
   def create
     @car = Car.new(car_params)
-
     if @car.save
-      render json: @car, status: :created, location: @car
+      render json: @car, include: :origin, status: :created, location: @car
     else
       render json: @car.errors, status: :unprocessable_entity
     end

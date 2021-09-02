@@ -11,6 +11,7 @@ const CarsComponent = ({cars, editCar, deleteCar}) => {
                 <p>Model: {car.model}</p>
                 <p>Color: {car.color}</p>
                 <p>Year: {car.year}</p>
+                <p>Origin: {car.origin.name}</p>
                 <button className="button btn btn-info" onClick={() => setCarForm(index)}>Edit</button>
                 <button className="button btn btn-danger" onClick={() => deleteCar(car.id)}>Delete</button>
                 {carForm === index &&
