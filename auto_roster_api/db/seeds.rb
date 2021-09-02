@@ -8,16 +8,16 @@
 Origin.destroy_all
 Car.destroy_all
 
-domestic = Origin.create(name: 'Domestic')
+export = Origin.create(name: 'Export')
 import = Origin.create(name: 'Import')
 
 Car.create([
   {make: 'Honda', model: 'CR-V', color: 'Brown', year: 2014, origin: import},
   {make: 'Honda', model: 'Civic', color: 'Silver', year: 2003, origin: import},
-  {make: 'Chevy', model: 'Suburban', color: 'Blue', year: 2007, origin: domestic},
-  {make: 'Ford', model: 'Mustang', color: 'Black', year: 1986, origin: domestic},
+  {make: 'Chevy', model: 'Suburban', color: 'Blue', year: 2007, origin: export},
+  {make: 'Ford', model: 'Mustang', color: 'Black', year: 1986, origin: export},
   {make: 'Audi', model: 'TT', color: 'Red', year: 2000, origin: import},
   {make: 'VW', model: 'Passat', color: 'Green', year: 2000, origin: import},
-  {make: 'Jeep', model: 'Laredo', color: 'Beige', year: 2005, origin: domestic},
-  {make: 'Buick', model: 'Park Avenue Ultra', color: 'White', year: 2005, origin: domestic}
+  {make: 'Jeep', model: 'Laredo', color: 'Beige', year: 2005, origin: export},
+  {make: 'Buick', model: 'Park Avenue Ultra', color: 'White', year: 2005, origin: export}
 ])
